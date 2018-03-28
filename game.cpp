@@ -11,7 +11,6 @@ string Generate_random_color(vector<string> A)
   string result = *(A.begin() + k);
   return result;
 }
-
 int main()
 {
   srand((unsigned)time(NULL));
@@ -26,21 +25,19 @@ int main()
   Colors.push_back("black");
   Colors.push_back("gray");
 
+
   vector<string> Pin;
   for(int i = 0; i < 4; ++i)
   {
     string k = Generate_random_color(Colors);
     Pin.push_back(k);
   }
-  for(int i = 0; i <  4; ++i)
-  {
-    cout << Pin[i] << ' ';
-  }
   vector<string> Pin_Try;
   int color_match = 0;
   int double_match = 0;
   for(int i = 0; i < 10; ++i)
   {
+    cout << "Input 4 colors:  ";
   for(int i = 0; i < 4; ++i)
   {
     string k; cin >> k;
@@ -84,7 +81,7 @@ int main()
   {
     ++color_match;
   }
-  cout << double_match << ' ' << color_match;
+  cout << double_match << ' ' << color_match << endl;
   Pin_Try.clear();
   double_match = 0;
   color_match = 0;
